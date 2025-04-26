@@ -4,7 +4,7 @@ This repo contains some projects I ended up making during my learning journey on
 # Hooking
 - A malicious user or programs wants to spawn “malware.exe”. To do this, CreateProcessW is called to create the new process and its primary thread.
 - The “process create” callback function is executed, and sends a pre notification to the EDR driver stating that a new process is going to be created.
-- The EDR driver instructs the EDR application (EDR_Process.exe) to inject and hook NTDLL in the memory space of the application (malware.exe) to redirect execution flow to itself.
+- The EDR driver inject and hook NTDLL in the memory space of the application (malware.exe) to redirect execution flow to itself.
 
 # Unhooking
 
